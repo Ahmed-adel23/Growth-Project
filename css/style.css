@@ -185,7 +185,7 @@ main{
     z-index: 8;
 }
 .card > p  , .card-text span{
-    font-weight: 300 !important;
+    font-weight: 400 !important;
 }
 .card-text p{
     font-weight: bold !important;
