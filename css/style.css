@@ -184,6 +184,9 @@ main{
     position: relative;
     z-index: 8;
 }
+.card > p  , .card-text span{
+    font-weight: 300 !important;
+}
 .card-text p{
     font-weight: bold !important;
     margin: 0;
