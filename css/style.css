@@ -1,0 +1,552 @@
+body{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 90px auto auto ;
+    grid-template-areas: 
+    '. header .'
+     'main main main'
+      'footer footer footer';
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    scroll-behavior: smooth !important;
+}
+:root {
+    --primary-color: #4891ff;
+    --light-color: #f4f4f6;
+    --dark-color: #333;
+}
+header{
+    grid-area: header;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-icon{
+    display: none;
+    font-size: 32px;
+}
+nav .nav-links{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+nav .nav-links .nav-link{
+    padding: 10px;
+    font-size: 16px;
+}
+nav .nav-links .nav-link a{
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: bold;
+    transition: .3s;
+}
+nav .nav-links .nav-link a:hover {
+    color: var(--primary-color);
+}
+nav .nav-links .btn-login{
+    padding: 10px 26px;
+    background-color: var(--light-color);
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--dark-color);
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: .3s;
+}
+nav .nav-links .btn-login:hover ,
+.home-btn .btn-1:hover , 
+.home-btn .btn-2:hover , 
+.video-btn .btn-1:hover ,
+.price-card .btn-1:hover , 
+.footer-sub .btn-1:hover{
+    background-color:#4891ffc9 !important;
+    color: whitesmoke;
+}
+main{
+    grid-area: main;
+}
+.home{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    background-image: url(../images/hero-bg.png);
+    background-position: center;
+    background-size: contain;
+    height: 800px;
+    background-repeat: no-repeat;
+}
+.home-text {
+    display: flex;
+    flex-direction: column;
+    text-transform: none;
+    font-size: 1.5rem;
+    margin-top: 30px;
+    width: 70%;
+}
+.home-text h1{
+    margin: 0 ;
+}
+.home-text p{
+        font-weight: 100;
+        font-size: 16px;
+        line-height: 25px;
+        width: 70%;
+}
+.home-text .home-btn button , .btn-1{
+    padding: 15px 20px;
+    background-color: var(--light-color);
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--dark-color);
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: .3s;
+}
+.home-text .home-btn .btn-1 , .btn-1{
+    background-color: var(--primary-color);
+    color: whitesmoke;
+}
+.home-img{
+    display: none;
+}
+.video{
+    background-color: black;
+    margin-top: -130px;
+    padding: 30px 0;
+    color: white;
+}
+.video .video-content{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.video .video-content h1{
+    text-align: center;
+    line-height: 3rem;
+    font-weight: 100;
+    
+}
+.video-img img{
+    width: 100%;
+}
+.video-btn{
+    margin-top: 20px;
+}
+.cards{
+    background-color: #111;
+    padding: 50px 0;
+}
+.cards-container{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.cards-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 15px;
+}
+.cards-container h1{
+    width: 60%;
+    text-align: start;
+    color: white;
+    font-weight: 100;
+    line-height: 3rem;
+    font-size: 1.9rem;
+}
+.card{
+    height: 240px;
+    width: calc(100% / 3);
+    background-color: white;
+    padding: 10px 10px 25px 10px; 
+    display: flex;
+    font-weight: 100;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    text-transform: none;
+    position: relative;
+    z-index: 8;
+}
+.card-text p{
+    font-weight: bold !important;
+    margin: 0;
+}
+.card::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    right: 0;
+    background-color: #333;
+    z-index: -1;
+    transition: .3s;
+    border-radius: 5px;
+}
+.card:hover:after{
+    width: 100%;
+    height: 100%;
+}
+.card:hover{
+    color: white !important;
+    transition-delay: .1s;
+}
+.price{
+    padding: 50px 0;
+}
+.price-container{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+.price-content{
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15px;
+}
+.price-card{
+    height: 550px;
+    width: calc(100% / 3);
+    background-color: var(--light-color);
+    padding: 20px; 
+    display: flex;
+    font-weight: 100;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    text-align: start;
+}
+.price-card .free strong{
+    font-size: 36px !important;
+}
+.price-card .price-list{
+    list-style: none;
+    padding: 0 0 0 10px;
+    line-height: 25px;
+}
+.price-container > p {
+    font-size: 18px;
+    font-weight: 400;
+    
+}
+.price-card-2{
+    background-color: #111 ;
+    color: white;
+}  
+.questions{
+    background-color: var(--light-color);
+    padding-bottom: 20px;
+}
+.questions-container{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding-top: 50px;
+}
+.question-header h1{
+    font-weight: 300;
+    font-size: 2.25rem;
+    color: #333;
+}
+.question-filter{
+    list-style: none;
+    display: flex;
+    width: 35%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#ddd;  
+    padding: 15px 20px;
+    column-gap: 10px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+.question-filter li:first-child {
+    background-color: var(--primary-color);
+    padding: 10px  20px; 
+    border-radius: 5px;
+    color: white;
+}
+.question-content{
+    width: 70%;
+    margin: auto;
+}
+.question{
+    text-align: start;
+    font-weight: 200;
+    margin-top: 40px ;
+}
+.question h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 60px;
+    color: #333;
+}
+footer{
+    grid-area: footer;
+    background-color: black;
+    color: white;
+    padding-bottom: 100px;
+}
+.footer-container{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 50px;
+}
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+    padding-top: 20px;
+}
+.footer-sub{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: start;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: black;
+    width: 70%;
+}
+.footer-sub h4{
+    margin: 0;
+    margin-top: 15px;
+}
+.footer-sub p{
+    font-size: 14px;
+    font-weight: 100;
+    padding: 0;
+    margin-bottom: 20px;
+}
+.footer-sub input{
+    padding: 8px;
+    margin-bottom: 20px;
+    border: .5px solid rgb(151, 151, 151);
+    border-radius: 5px;
+}
+.footer-sub .btn-1{
+    margin-bottom: 10px;
+}
+.footer-list{
+    width: calc(100% / 3);
+    list-style: none;
+}
+.footer-list li {
+    padding-bottom:20px ;
+    color: #ccc;
+    font-weight: 100;
+    font-size: 15px;
+}
+.footer-list li a{
+    text-decoration: none;
+    color: #ccc;
+}
+
+@media (max-width: 768px){
+    header{
+        grid-area: 1 / span 3;
+    }
+    nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .home{
+        width: 90%;
+        margin: auto;
+        min-height: 100vh;
+    }
+    .home-text {
+        font-size: 20px;
+    }
+    .video{
+        margin-top: -200px;
+    } 
+    .video .video-content{
+        width: 90%;
+        margin: auto;
+    }
+    .cards .cards-container{
+        width: 90%;
+        margin: auto;
+ 
+    }   
+    .cards-container h1{
+        width: 90%;
+    }
+    .price-container{
+        width: 90%;
+        margin: auto;
+    }
+    .price-card{
+        width: calc(100% / 2);
+    } 
+    .questions-container{
+        width: 90%;
+        margin: auto;
+    }
+    .question-content{
+        width: 100%;
+    }
+    main{
+        grid-area: 2 / span 3;
+    }
+    footer{
+        grid-area: 3 / span 3;
+    }
+    .footer-container{
+        width: 90%;
+        margin: auto;
+    }    
+    .footer-content{
+        column-gap: 0;
+    }
+    .footer-list li {
+        font-size: 13px;
+    }
+}
+@media (max-width: 650px){
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 25px 35px;
+    }    
+    .nav-icon{
+        display:block;
+    }
+    .home-img{
+        display: block;
+    }
+    .home-img img {
+        width: 100%;
+    }
+    .home{
+        background-image: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: auto;
+        margin: 40px  auto;
+    }
+    .home-text {
+        width: 100%;
+        font-size: 16px;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 90px;
+    }
+    .home-text p {
+        width: 100%;
+    }
+    .home-btn{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 10px;
+    } 
+    .video{
+        margin-top: 0;
+    } 
+  
+    .nav-links{
+        display: none !important;
+    }
+    .cards-content{
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+    }
+    .card{
+        height: 180px;
+        width: 100%;
+    }    
+    .cards-container h1{
+        width: 100%;
+        text-align: center;
+        line-height: 2.25rem;
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
+    .home-btn button{
+    width: 100%;
+    }
+    .video-content h1{
+        font-size: 28px;
+        font-weight: 300;
+    }
+    .price-content{
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 15px;
+    }
+    .price-card{
+        width: 95%;
+    }
+    .question-header h1{
+        font-weight: 300;
+        font-size: 2rem;
+    }
+    .question-filter{
+        width: 90%;
+        margin: auto;
+        margin-bottom: 20px;
+    }    
+    .question h3{
+        font-size: 1rem;
+    }
+    .question1 P {
+        font-size: 15px;
+    }
+    .footer-container{
+        align-items: center;
+    }
+    .footer-content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        column-gap: 0px;
+
+    }
+    .footer-sub{
+        width: 90%;
+    }
+    .footer-list{
+        width: 90%;
+        padding: 0;
+    }
+        .footer-list li {
+        font-size: 16px;
+    }        
+}
