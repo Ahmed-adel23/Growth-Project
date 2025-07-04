@@ -94,7 +94,7 @@ main{
     margin: 0 ;
 }
 .home-text p{
-        font-weight: 100;
+        font-weight: 400;
         font-size: 16px;
         line-height: 25px;
         width: 70%;
@@ -135,7 +135,7 @@ main{
 .video .video-content h1{
     text-align: center;
     line-height: 3rem;
-    font-weight: 100;
+    font-weight: 400;
     
 }
 .video-img img{
@@ -176,16 +176,13 @@ main{
     background-color: white;
     padding: 10px 10px 25px 10px; 
     display: flex;
-    font-weight: 100;
+    font-weight: 400;
     flex-direction: column;
     justify-content: space-between;
     border-radius: 10px;
     text-transform: none;
     position: relative;
     z-index: 8;
-}
-.card > p  , .card-text span{
-    font-weight: 400 !important;
 }
 .card-text p{
     font-weight: bold !important;
@@ -235,7 +232,7 @@ main{
     background-color: var(--light-color);
     padding: 20px; 
     display: flex;
-    font-weight: 100;
+    font-weight: 400;
     flex-direction: column;
     justify-content: space-between;
     border-radius: 10px;
@@ -367,7 +364,7 @@ footer{
 .footer-list li {
     padding-bottom:20px ;
     color: #ccc;
-    font-weight: 100;
+    font-weight: 400;
     font-size: 15px;
 }
 .footer-list li a{
